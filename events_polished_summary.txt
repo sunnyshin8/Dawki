@@ -1,0 +1,95 @@
+======================================================================
+ENRICHED EVENT DATASET - POLISHED SUMMARY
+======================================================================
+
+Total rows:     8,173
+Total features: 104
+
+--- TARGET LABEL DISTRIBUTION ---
+impact_class
+Critical    5503
+Low         1599
+Medium       793
+High         278
+Name: count, dtype: int64
+
+--- DURATION STATISTICS (minutes) ---
+count    2725.000000
+mean      122.459303
+std       232.639064
+min         1.000000
+25%        22.900000
+50%        49.300000
+75%        96.500000
+max      1439.800000
+Name: duration_minutes, dtype: float64
+
+--- RECOMMENDED ACTION DISTRIBUTION ---
+recommended_action
+NO_ACTION                 6508
+MONITOR                    719
+PARTIAL_CLOSURE_DIVERT     642
+OFFICER_DEPLOY             245
+FULL_DIVERSION              55
+HAZMAT_PROTOCOL              4
+Name: count, dtype: int64
+
+--- WEATHER DISTRIBUTION ---
+weather_condition
+Sunny            4991
+Foggy            1777
+Partly_Cloudy     754
+Thunderstorm      361
+Rainy             290
+Name: count, dtype: int64
+
+--- TIME OF DAY DISTRIBUTION ---
+time_of_day
+night            3304
+mid_morning      1324
+morning_rush     1159
+lunch_hour        976
+early_morning     836
+afternoon         420
+evening_rush      138
+evening            16
+Name: count, dtype: int64
+
+--- MISSING % IN POLISHED DATASET ---
+direction                          99.47
+resolved_at_latitude               99.09
+resolved_at_address                99.09
+resolved_at_longitude              99.09
+resolved_datetime                  99.09
+citizen_accident_id                98.43
+assigned_to_police_id              98.43
+route_path                         98.32
+age_of_truck                       96.62
+cargo_material                     96.62
+reason_breakdown                   96.62
+end_datetime                       94.19
+end_address                        91.59
+duration_minutes                   66.66
+impact_score                       66.66
+responder_corridor_avg_duration    65.12
+closed_datetime                    61.57
+gba_identifier                     57.86
+vehicle_breakdown_freq             40.22
+veh_no                             40.22
+veh_type                           40.21
+reporter_event_count               23.47
+reporter_avg_duration              23.47
+description                        16.64
+kgid                                3.17
+endlatitude                         2.07
+endlongitude                        2.07
+start_datetime                      1.42
+start_hour                          1.42
+start_month                         1.42
+start_dow                           1.42
+start_minute                        1.42
+creation_lag_minutes                1.42
+start_dow_name                      1.42
+time_slot                           1.42
+address                             0.04
+dtype: float64
