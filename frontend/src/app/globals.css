@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Glassmorphism / Aero-Morphism Custom Styles */
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.4) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 91, 177, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 24px rgba(42, 140, 255, 0.04);
+}
+
+.glass-panel-elevated {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-top: 2px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 32px rgba(42, 140, 255, 0.08), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 91, 177, 0.15);
+  transition: all 0.3s ease;
+}
+
+.glass-input:focus-within {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #0073dd;
+  box-shadow: 0 0 0 4px rgba(0, 115, 221, 0.15);
+}
+
+.aero-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(0, 115, 221, 0.02) 100%);
+  box-shadow: 0 8px 32px rgba(42, 140, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.aero-interactive {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.aero-interactive:hover {
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: 0 12px 40px rgba(42, 140, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.glow-line {
+  box-shadow: 0 0 12px rgba(0, 91, 177, 0.35);
+}
+
+.text-glow-primary {
+  text-shadow: 0 0 12px rgba(0, 91, 177, 0.3);
+}
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
