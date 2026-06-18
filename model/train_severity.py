@@ -435,3 +435,13 @@ print("Layer 2 complete.")
 print(f"  OOF MAE (regression):      {np.mean(fold_maes):.2f} min")
 print(f"  OOF Weighted F1 (classif): {np.mean(fold_f1s):.3f}")
 print("=" * 60)
+
+
+import joblib
+
+joblib.dump(
+    le_map,
+    os.path.join(OUTPUT_DIR, "label_encoders.pkl")
+)
+
+print("✓ Label encoders saved")
