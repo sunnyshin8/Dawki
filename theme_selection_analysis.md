@@ -22,7 +22,7 @@ This document provides a strategic analysis of the three problem statements prop
 ### Theme 1: Poor Visibility on Parking-Induced Congestion
 **The Goal:** Build an AI system to detect illegal parking hotspots and *quantify* their exact impact on traffic flow to prioritize enforcement.
 
-*   **Why it is tough:** Causal congestion modeling — you cannot just show correlation. You have to prove that *Vehicle A* parked at *Location X* directly caused a *Y% reduction in throughput*.
+*   **Why it is tough:** Causal congestion modeling : you cannot just show correlation. You have to prove that *Vehicle A* parked at *Location X* directly caused a *Y% reduction in throughput*.
 *   **Real-world Impact:** High. A single double-parked vehicle can choke an entire arterial road, turning a 3-lane street into a 1-lane bottleneck.
 
 ---
@@ -45,16 +45,16 @@ This document provides a strategic analysis of the three problem statements prop
 
 *   **Why people will choose it more (Lowest Uniqueness):** At least 60% of all submissions will choose this. Standard template: YOLOv8 + DeepSORT + Tesseract/EasyOCR.
 *   **Why it is less tough:** Core algorithms are pre-trained and mature. Very little conceptual novelty.
-*   **Real-world Impact:** Moderate and reactive — does not directly reduce gridlock.
+*   **Real-world Impact:** Moderate and reactive : does not directly reduce gridlock.
 
 ---
 
 ## Recommendation: Event-Driven Congestion (Theme 2)
 
 **Theme 2** is the clear winner:
-1. **Stand Out from the Crowd** — Judges will see dozens of CV violation detectors. A predictive + prescriptive system for police staffing and diversion planning is rare.
-2. **Highest scoring criteria fit** — Uniqueness, systemic impact, and algorithmic complexity all peak with Theme 2.
-3. **Builds on existing codebase** — The workspace already has `train_model.py` and traffic demand notebooks, making spatio-temporal extension natural.
+1. **Stand Out from the Crowd** : Judges will see dozens of CV violation detectors. A predictive + prescriptive system for police staffing and diversion planning is rare.
+2. **Highest scoring criteria fit** : Uniqueness, systemic impact, and algorithmic complexity all peak with Theme 2.
+3. **Builds on existing codebase** : The workspace already has `train_model.py` and traffic demand notebooks, making spatio-temporal extension natural.
 
 ---
 
@@ -88,6 +88,6 @@ graph TD
 ```
 
 ### Key Technical Pillars:
-1. **The Predictor** — Spatio-Temporal GNN models the road system as a directed graph
-2. **The Optimizer** — ILP for police allocation + constrained shortest-path for diversions
-3. **Interactive Control Center** — Leaflet.js map with event epicenter, heatmap, and clickable diversion suggestions
+1. **The Predictor** : Spatio-Temporal GNN models the road system as a directed graph
+2. **The Optimizer** : ILP for police allocation + constrained shortest-path for diversions
+3. **Interactive Control Center** : Leaflet.js map with event epicenter, heatmap, and clickable diversion suggestions

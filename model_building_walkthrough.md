@@ -70,7 +70,7 @@ Phase2/                                      ← workspace root
 
 ---
 
-## Layer 1 — Primary Layer: Data Foundation and Feature Extraction
+## Layer 1 : Primary Layer: Data Foundation and Feature Extraction
 
 This layer converts raw events into model-ready signals. It should be the first thing you trust and the first thing you validate.
 
@@ -115,7 +115,7 @@ Only keep features that would have been known at prediction time. If a field dep
 
 ---
 
-## Layer 2 — Model Layer: Event Severity Prediction
+## Layer 2 : Model Layer: Event Severity Prediction
 
 This layer predicts how long an event will last and how severe it is likely to become at creation time.
 
@@ -165,7 +165,7 @@ python model/train_severity.py
 
 ---
 
-## Layer 3 — Risk Layer: Zone x Time Forecasting
+## Layer 3 : Risk Layer: Zone x Time Forecasting
 
 This layer turns individual event predictions into operational risk by corridor, zone, day-of-week, and time block.
 
@@ -209,7 +209,7 @@ agg['target_high_impact'] = (agg['high_impact_count'] >= 1).astype(int)
 
 ---
 
-## Layer 4 — Action Layer: Manpower and Route Decisions
+## Layer 4 : Action Layer: Manpower and Route Decisions
 
 This layer turns risk into action. It should be prescriptive, not just descriptive.
 
@@ -324,4 +324,4 @@ Expected top drivers:
 
 The point of the 4-layer design is not to add complexity for its own sake. It is to separate feature extraction from prediction, prediction from aggregation, and aggregation from action so each step can be checked, tuned, and trusted.
 
-> **The system is an Event Operations Copilot** — tells controllers WHO to deploy, WHERE, and WHEN, before congestion happens.
+> **The system is an Event Operations Copilot** : tells controllers WHO to deploy, WHERE, and WHEN, before congestion happens.
