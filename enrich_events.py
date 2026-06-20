@@ -1,5 +1,5 @@
 """
-enrich_events.py — GOD MODE Feature Engineering Pipeline
+enrich_events.py : GOD MODE Feature Engineering Pipeline
 =========================================================
 Clones the Astram event dataset and enriches it with:
   1. Temporal intelligence (rush hour, peak slots, time of day)

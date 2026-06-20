@@ -68,7 +68,7 @@ export default function Sidebar({
                 onClick={() => setActiveTab(item.id)}
                 className={`flex items-center gap-4 px-4 py-3 rounded-xl font-sans text-sm transition-all duration-200 cursor-pointer ${
                   isActive 
-                    ? 'bg-primary text-white font-bold shadow-md scale-102 hover:bg-primary-container' 
+                    ? 'bg-primary text-white font-bold shadow-md scale-102 hover:bg-primary/90' 
                     : 'text-on-surface-variant hover:bg-white/50 hover:translate-x-1'
                 }`}
               >

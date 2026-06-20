@@ -121,12 +121,12 @@ export const INITIAL_CORRIDORS: Corridor[] = [
     id: 'corr-1',
     name: 'ORR East 1',
     nameKa: 'ಹೊರ ವರ್ತುಲ ರಸ್ತೆ',
-    riskScore: 92,
-    peakTimeMsg: 'Peak in 45 mins',
-    status: 'Diverted Route Suggested',
-    statusLevel: 'error',
-    trend: 'up',
-    color: '#ba1a1a',
+    riskScore: 0,
+    peakTimeMsg: 'Fetching live data...',
+    status: 'Connecting...',
+    statusLevel: 'success',
+    trend: 'stable',
+    color: '#94a3b8',
     x: 75,
     y: 50
   },
@@ -134,12 +134,12 @@ export const INITIAL_CORRIDORS: Corridor[] = [
     id: 'corr-2',
     name: 'Hosur Road',
     nameKa: 'ಹೊಸೂರು ರಸ್ತೆ',
-    riskScore: 78,
-    peakTimeMsg: 'Waterlogging likely at flyover',
-    status: 'Officers Dispatched',
-    statusLevel: 'warning',
+    riskScore: 0,
+    peakTimeMsg: 'Fetching live data...',
+    status: 'Connecting...',
+    statusLevel: 'success',
     trend: 'stable',
-    color: '#c05400',
+    color: '#94a3b8',
     x: 60,
     y: 78
   },
@@ -147,12 +147,12 @@ export const INITIAL_CORRIDORS: Corridor[] = [
     id: 'corr-3',
     name: 'Tumkur Road',
     nameKa: 'ತುಮಕೂರು ರಸ್ತೆ',
-    riskScore: 45,
-    peakTimeMsg: 'Flowing Normal',
-    status: 'Clear Flow',
+    riskScore: 0,
+    peakTimeMsg: 'Fetching live data...',
+    status: 'Connecting...',
     statusLevel: 'success',
-    trend: 'down',
-    color: '#006b57',
+    trend: 'stable',
+    color: '#94a3b8',
     x: 22,
     y: 42
   },
@@ -160,37 +160,17 @@ export const INITIAL_CORRIDORS: Corridor[] = [
     id: 'corr-4',
     name: 'Bellary Road',
     nameKa: 'ಬಳ್ಳಾರಿ ರಸ್ತೆ',
-    riskScore: 28,
-    peakTimeMsg: 'Free Flowing Transit',
-    status: 'All Lanes Clear',
+    riskScore: 0,
+    peakTimeMsg: 'Fetching live data...',
+    status: 'Connecting...',
     statusLevel: 'success',
     trend: 'stable',
-    color: '#0284c7',
+    color: '#94a3b8',
     x: 48,
     y: 16
   }
 ];
 
-export const AI_INSIGHTS = [
-  {
-    id: 'ins-1',
-    type: 'rain',
-    text: 'Rain predicted at 4 PM near Bellandur; expect a 30% spike in congestion.',
-    icon: 'CloudRain',
-    color: 'text-error'
-  },
-  {
-    id: 'ins-2',
-    type: 'protocol',
-    text: 'Tech park staggered exit protocol is active today. Peak flow extended.',
-    icon: 'Calendar',
-    color: 'text-secondary'
-  },
-  {
-    id: 'ins-3',
-    type: 'flow',
-    text: 'Current route shows 15% lower volume than historical average.',
-    icon: 'TrendingDown',
-    color: 'text-primary'
-  }
-];
+// AI_INSIGHTS are now generated dynamically from live weather/risk data
+// See BestTimeToTravel.tsx : buildLiveInsights(livePredict, forecast)
+
