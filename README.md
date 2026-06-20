@@ -1,6 +1,39 @@
 # Dawki: Traffic Intelligence & Mitigation Platform
 
-Dawki is an event-driven congestion forecasting and real-time operations console tailored for the Bengaluru sector. By combining backend machine learning risk models with public telemetry (WeatherAPI, Mappls Web Map SDK, and TomTom Live Traffic Tiles), Dawki provides traffic controllers and logistics managers with live actionable insight, predictive routing analysis, and operational reports.
+**Dawki** is an event-driven congestion forecasting and real-time operations console tailored for the Bengaluru sector. 
+
+Inspired by the town of Dawki in Meghalaya—famous for its crystal-clear Umngot river where boats appear to float seamlessly in mid-air—the **Dawki Platform** aims to bring **crystal-clear transparency** to city traffic networks, enabling vehicles to flow smoothly and efficiently across congested urban sectors.
+
+---
+
+## What is Dawki?
+
+Dawki is a predictive intelligence platform designed to replace reactive traffic management systems. Instead of looking at traffic cameras after a gridlock has already occurred, Dawki uses **FastAPI-powered machine learning models** and **Next.js interactive consoles** to predict how weather changes, accidents, roadworks, and VVIP movements will impact corridor travel times and congestion risks over a 24-hour horizon.
+
+---
+
+## Why is Dawki Useful? (The Problem & The Solution)
+
+### 🔴 The Problem with Modern Traffic Control
+* **Reactive Operations**: Traffic lights and dispatchers react *after* queues form, rather than pre-emptively redirecting vehicles.
+* **Static Assumptions**: Traditional scheduling tools assume a static city. They do not account for how 1.5 inches of rain near central junctions dynamically cascades into hours of backlog.
+* **Siloed Data**: Traffic maps show where congestion is, weather apps show rain, and dispatch logs show accidents, but there is no single interface linking them to predictive algorithms.
+
+### 🟢 The Dawki Solution
+* **Pre-emptive Mitigation**: Suggests officer deployments and route deviations *before* congestion peaks.
+* **Live Weather Integration**: Dynamically updates classification pipelines with current precipitation, visibility, and wind telemetry.
+* **Actionable Telemetry**: Merges TomTom's real-time physical road congestion layers with Dawki's custom AI model risk predictions on a single 3D interactive map.
+
+---
+
+## What Dawki Provides
+
+* **Holographic 2D & Interactive Mappls 3D Maps**: Toggle between a stylized vector dashboard (with custom pulsing risk indicators) and a fully interactive 3D map of Bengaluru. 
+* **TomTom Traffic Overlays**: Real-time traffic flow tiles (`relative-delay` styling) and live incident overlays (accidents, closures) mapped directly on top of Mappls base map.
+* **Travel Scheduling Assistant (Best Time to Travel)**: Input any starting point and destination in Bengaluru to calculate the exact optimal hours to travel and see predicted time-savings.
+* **AI Route Profiling**: Compares multiple routes, scoring each out of 100 based on live weather data, travel times, and ML-calculated risk levels.
+* **Operations Analytics (Reports)**: Generates 24-hour forecasting charts and logs showing incident ratios (breakdowns, waterlogging, etc.) for sector auditing.
+* **AI Incident Intake Pipeline**: An interactive system allowing dispatchers to register new anomalies (e.g. VVIP movements, accidents) and immediately recalculate sector-wide risks.
 
 ---
 
@@ -24,40 +57,6 @@ Dawki is an event-driven congestion forecasting and real-time operations console
  │ (WeatherAPI Proxy) │       │ (Historical Risk) │
  └────────────────────┘       └───────────────────┘
 ```
-
-* **Frontend**: Next.js App Router (React, Tailwind CSS v4, Lucide Icons, Mappls JS SDK).
-* **Backend**: FastAPI (Python 3.12/3.14, Uvicorn, Pandas, Cachetools).
-* **Telemetry**: WeatherAPI (live weather features), Mappls Places Proxy (autosuggest search), and TomTom API (live traffic flow and incident layers).
-
----
-
-## Features
-
-### 1. Live City View (Holographic 2D & Mappls 3D)
-* **2D View**: Styled SVG representation of Bengaluru corridors (Bellary Road, Hosur Road, Tumkur Road, Outer Ring Road) showing real-time risk severity.
-* **3D View**: Full perspective-tilted interactive map powered by Mappls JS SDK.
-* **TomTom Overlays**: Real-time traffic flow tiles (`relative-delay` styling) and live incident overlays (accidents, roadworks) with toggles.
-* **Click-to-Fly**: Click any corridor pin to automatically fly the camera to that GPS coordinate.
-
-### 2. Travel Scheduling Assistant (Best Time to Travel)
-* **ML Predictions**: Evaluates risk and travel times across different hours of the day using real-time weather parameters.
-* **Safe Window Planner**: Computes the optimal time windows to save time and reduce delay.
-* **Text-to-Speech**: Synthesizes and reads out the traffic projection summary.
-* **Address Search**: Autocomplete search bar powered by Mappls Places API.
-
-### 3. Routes & Congestion Profiling
-* **Live Alternative Scoring**: Displays multiple route alternatives with dynamic congestion risk bars, weather advisory chips, and total corridor score gauges.
-* **Interactive SVG Map**: Track active routes with animation.
-* **Dynamic Origin & Destination**: Search any place in Bengaluru to update the route path and telemetry.
-
-### 4. Operations Analytics (Reports)
-* **Forecast index profile**: Draws an interactive line graph of the 24-hour hourly risk forecast loaded directly from the backend.
-* **Incident breakdown proportions**: Visualizes incident categories (breakdowns, weather-logging, works) based on live anomaly logs.
-* **Recap exporting**: Export local logs to standard operational reports.
-
-### 5. Alerts Catalog & Incident Intake Pipeline
-* **Dispatcher triggers**: File new alerts manually through the **AI Incident Intake Pipeline** to update predicted anomalies in real time.
-* **Multilingual translations**: Broadcast emergency bulletins with instant translation (via optional Sarvam AI integration).
 
 ---
 
