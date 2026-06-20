@@ -17,7 +17,7 @@ Dawki is a predictive intelligence platform designed to replace reactive traffic
 ### 🔴 The Problem with Modern Traffic Control
 * **Reactive Operations**: Traffic lights and dispatchers react *after* queues form, rather than pre-emptively redirecting vehicles.
 * **Static Assumptions**: Traditional scheduling tools assume a static city. They do not account for how 1.5 inches of rain near central junctions dynamically cascades into hours of backlog.
-* **Siloed Data**: Traffic maps show where congestion is, weather apps show rain, and dispatch logs show accidents, but there is no single interface linking them to predictive algorithms.
+* **Siloed Data**: Traffic maps show where congestion is, weather apps show rain, and dispatch logs show accidents, but there is no single interface linking them to predictive algorithms
 
 ### 🟢 The Dawki Solution
 * **Pre-emptive Mitigation**: Suggests officer deployments and route deviations *before* congestion peaks, preventing bottleneck propagation.
