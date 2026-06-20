@@ -20,9 +20,12 @@ Dawki is a predictive intelligence platform designed to replace reactive traffic
 * **Siloed Data**: Traffic maps show where congestion is, weather apps show rain, and dispatch logs show accidents, but there is no single interface linking them to predictive algorithms.
 
 ### 🟢 The Dawki Solution
-* **Pre-emptive Mitigation**: Suggests officer deployments and route deviations *before* congestion peaks.
-* **Live Weather Integration**: Dynamically updates classification pipelines with current precipitation, visibility, and wind telemetry.
+* **Pre-emptive Mitigation**: Suggests officer deployments and route deviations *before* congestion peaks, preventing bottleneck propagation.
+* **Live Weather Integration**: Dynamically updates classification pipelines with current precipitation, visibility, and wind telemetry to calculate dynamic delay risk.
 * **Actionable Telemetry**: Merges TomTom's real-time physical road congestion layers with Dawki's custom AI model risk predictions on a single 3D interactive map.
+* **Multilingual Public Broadcasts**: Integrates localized voice alerts and real-time translation (supporting Kannada, Hindi, Tamil, Telugu, and Malayalam) so emergency warnings are universally understood by all drivers.
+* **Accessible Travel scheduling**: Employs TTS (Text-to-Speech) engines to read aloud travel warnings and optimal departure windows for hands-free driver operations.
+* **Granular Time-Series Projections**: Evaluates traffic patterns using 24 hourly segments for precise congestion timeline forecasting rather than simple peak/off-peak generalizations.
 
 ---
 
@@ -67,10 +70,10 @@ Create the environment variables configuration files in their respective folders
 ### Root Level `.env` (Backend Configuration)
 ```env
 # WeatherAPI.com key (required)
-WEATHER_API_KEY=6772f550484d4da090b122409261706
+WEATHER_API_KEY=your_weatherapi_key_here
 
 # Sarvam AI key (optional : for translation + TTS multilingual alerting)
-SARVAM_API_KEY=your_key_here
+SARVAM_API_KEY=your_sarvam_api_key_here
 ```
 
 ### Frontend Level `frontend/.env.local` (Client-Side Configuration)
@@ -79,13 +82,13 @@ SARVAM_API_KEY=your_key_here
 NEXT_PUBLIC_API_URL=http://localhost:8001
 
 # Mappls Places API (server-side only)
-MAPPLS_API_KEY=jltwvahjvpgjbqechixmrpzrefjvddntsgzl
+MAPPLS_API_KEY=your_mappls_server_api_key_here
 
 # Mappls browser map SDK (client-side)
-NEXT_PUBLIC_MAPPLS_API_KEY=jltwvahjvpgjbqechixmrpzrefjvddntsgzl
+NEXT_PUBLIC_MAPPLS_API_KEY=your_mappls_client_api_key_here
 
 # TomTom Traffic Tile API (client-side)
-NEXT_PUBLIC_TOMTOM_API_KEY=Bsc2e5cCXbqnMl5Qf6h0oZibbZzTqKGo
+NEXT_PUBLIC_TOMTOM_API_KEY=your_tomtom_api_key_here
 ```
 
 ---
