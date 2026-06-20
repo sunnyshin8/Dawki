@@ -217,7 +217,7 @@ function buildDynamicAlerts(routeId: string, riskRes: any, predictRes: any) {
       type: 'weather',
       title: `Weather Advisory: ${predictRes.weather?.condition}`,
       desc: `Current conditions: ${predictRes.weather?.condition} at ${temp}°C. Reduced visibility and wet roads increase incident probability.`,
-      impact: 'Reduce speed — slippery conditions',
+      impact: 'Reduce speed  slippery conditions',
       severity: cond.includes('storm') ? 'critical' : 'medium',
     });
   }
@@ -520,7 +520,7 @@ export default function RoutesAnalysis({ language }: RoutesAnalysisProps) {
               <div className="flex justify-between items-start mb-3 relative z-10 w-full">
                 <div>
                   <span className={`font-mono text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded ${isBest ? 'bg-emerald-100 text-emerald-800 border border-emerald-300 font-black'
-                      : route.id === 'hosur' ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
+                    : route.id === 'hosur' ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
                     }`}>
                     {isBest ? '★ AI Recommended' : route.id === 'hosur' ? 'Fastest' : 'Alternative'}
                   </span>
@@ -556,8 +556,8 @@ export default function RoutesAnalysis({ language }: RoutesAnalysisProps) {
                     <Activity size={9} /> Corridor Score
                   </span>
                   <span className={`font-mono text-[10px] font-extrabold px-1.5 py-0.5 rounded ${route.corridorScore <= 30 ? 'bg-emerald-100 text-emerald-800'
-                      : route.corridorScore <= 60 ? 'bg-amber-100 text-amber-800'
-                        : 'bg-red-100 text-red-800'
+                    : route.corridorScore <= 60 ? 'bg-amber-100 text-amber-800'
+                      : 'bg-red-100 text-red-800'
                     }`}>
                     {route.corridorScore}/100
                   </span>
@@ -597,16 +597,16 @@ export default function RoutesAnalysis({ language }: RoutesAnalysisProps) {
             <div
               key={alertItem.id}
               className={`glass-card rounded-2xl p-5 flex items-start gap-4 border-l-4 shadow-sm hover:translate-y-[-1px] transition-transform cursor-pointer ${alertItem.severity === 'critical' ? 'border-l-error'
-                  : alertItem.severity === 'medium' ? 'border-l-amber-500'
-                    : alertItem.severity === 'safe' ? 'border-l-[#006b57]'
-                      : 'border-l-primary'
+                : alertItem.severity === 'medium' ? 'border-l-amber-500'
+                  : alertItem.severity === 'safe' ? 'border-l-[#006b57]'
+                    : 'border-l-primary'
                 }`}
             >
               <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${alertItem.severity === 'critical' ? 'bg-red-50 text-error'
-                  : alertItem.severity === 'medium' ? 'bg-amber-50 text-amber-600'
-                    : alertItem.severity === 'safe' ? 'bg-emerald-50 text-emerald-600'
-                      : alertItem.type === 'weather' ? 'bg-blue-50 text-primary'
-                        : 'bg-blue-50 text-primary'
+                : alertItem.severity === 'medium' ? 'bg-amber-50 text-amber-600'
+                  : alertItem.severity === 'safe' ? 'bg-emerald-50 text-emerald-600'
+                    : alertItem.type === 'weather' ? 'bg-blue-50 text-primary'
+                      : 'bg-blue-50 text-primary'
                 }`}>
                 {alertItem.type === 'weather' ? <CloudRain size={18} className={alertItem.severity === 'critical' ? 'animate-pulse' : ''} />
                   : alertItem.severity === 'safe' ? <CheckCircle size={18} />
@@ -616,8 +616,8 @@ export default function RoutesAnalysis({ language }: RoutesAnalysisProps) {
                 <h4 className="font-sans font-bold text-xs text-on-surface">{alertItem.title}</h4>
                 <p className="font-sans text-[11px] text-on-surface-variant leading-snug mt-1">{alertItem.desc}</p>
                 <span className={`font-mono text-[9px] font-bold block mt-2 ${alertItem.severity === 'critical' ? 'text-error'
-                    : alertItem.severity === 'medium' ? 'text-amber-600'
-                      : 'text-emerald-600'
+                  : alertItem.severity === 'medium' ? 'text-amber-600'
+                    : 'text-emerald-600'
                   }`}>
                   {alertItem.impact}
                 </span>

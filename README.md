@@ -2,7 +2,7 @@
 
 **Dawki** is an event-driven congestion forecasting and real-time operations console tailored for the Bengaluru sector. 
 
-Inspired by the town of Dawki in Meghalaya—famous for its crystal-clear Umngot river where boats appear to float seamlessly in mid-air—the **Dawki Platform** aims to bring **crystal-clear transparency** to city traffic networks, enabling vehicles to flow smoothly and efficiently across congested urban sectors.
+Inspired by the town of Dawki in Meghalayafamous for its crystal-clear Umngot river where boats appear to float seamlessly in mid-airthe **Dawki Platform** aims to bring **crystal-clear transparency** to city traffic networks, enabling vehicles to flow smoothly and efficiently across congested urban sectors.
 
 ---
 
